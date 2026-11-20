@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>心言 · xinyan.loc.cc</title>
+<meta name="description" content="心言的个人主页 —— 记录想法、作品，和折腾过的东西。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231A1A18'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23FBFAF8' text-anchor='middle'%3E心%3C/text%3E%3C/svg%3E">
+<style>
+  :root {
+    --bg: #FBFAF8;
+    --ink: #1A1A18;
+    --muted: #82807A;
+    --line: rgba(26, 26, 24, 0.10);
+    --accent: #1D6F5C;
+    --card: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro SC", "PingFang SC",
+                 "Helvetica Neue", "Microsoft YaHei", sans-serif;
+    line-height: 1.7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 48px 24px;
+  }
+  main { width: 100%; max-width: 620px; }
+
+  .mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 38px;
+  }
+  .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--accent);
+  }
+
+  h1 {
+    font-family: Georgia, "Songti SC", "Source Han Serif SC", serif;
+    font-size: clamp(38px, 9vw, 58px);
+    line-height: 1.15;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    margin: 0 0 10px;
+  }
+  .latin {
+    display: block;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 13px;
+    letter-spacing: 0.22em;
+    color: var(--muted);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+
+  .lede {
+    font-size: 17px;
+    color: #3A3936;
+    margin: 0 0 6px;
+  }
+  .lede-sub {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0 0 46px;
+  }
+
+  .links {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-bottom: 46px;
+  }
+  @media (max-width: 480px) {
+    .links { grid-template-columns: 1fr; }
+  }
+  a.card {
+    display: block;
+    padding: 16px 18px;
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color .18s ease, transform .18s ease;
+  }
+  a.card:hover { border-color: rgba(29, 111, 92, 0.45); transform: translateY(-2px); }
+  .card-title {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  .card-meta {
+    display: block;
+    font-size: 12px;
+    color: var(--muted);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding-top: 20px;
+    font-size: 12px;
+    color: var(--muted);
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  footer span { white-space: nowrap; }
+
+  .rise { animation: rise .7s cubic-bezier(.22,.61,.36,1) both; }
+  .d1 { animation-delay: .05s; }
+  .d2 { animation-delay: .12s; }
+  .d3 { animation-delay: .19s; }
+  .d4 { animation-delay: .26s; }
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: none; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .rise { animation: none; }
+    a.card:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="mark rise d1"><span class="dot"></span>Building something small</div>
+
+  <h1 class="rise d1">心言</h1>
+  <span class="latin rise d1">xinyan.loc.cc</span>
+
+  <p class="lede rise d2">记录想法、作品，和折腾过的东西。</p>
+  <p class="lede-sub rise d2">一个安静的个人角落，慢慢填满。</p>
+
+  <nav class="links rise d3">
+    <a class="card" href="mailto:hello@xinyan.loc.cc">
+      <span class="card-title">写封信</span>
+      <span class="card-meta">hello@xinyan.loc.cc</span>
+    </a>
+    <a class="card" href="https://github.com/" target="_blank" rel="noopener">
+      <span class="card-title">GitHub</span>
+      <span class="card-meta">代码与半成品</span>
+    </a>
+    <a class="card" href="#">
+      <span class="card-title">笔记</span>
+      <span class="card-meta">陆续上线</span>
+    </a>
+    <a class="card" href="#">
+      <span class="card-title">关于</span>
+      <span class="card-meta">施工中</span>
+    </a>
+  </nav>
+
+  <footer class="rise d4">
+    <span>© 2026 心言</span>
+    <span>Powered by a free subdomain</span>
+  </footer>
+</main>
+</body>
+</html>
